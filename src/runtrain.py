@@ -14,7 +14,7 @@ def run_pipeline(games_path):
 
     # preprocess games walkthrough
     subprocess.call(["python3", 
-                        os.path.join(basepath, 'datasets.py'),
+                        os.path.join(basepath, 'dataset.py'),
                         games_path,
                         "--output", output
                     ])
@@ -25,7 +25,7 @@ def run_pipeline(games_path):
                     ])
     # train NER model
     subprocess.call(["python3", 
-                        os.path.join(basepath, 'nertraining.py'),
+                        os.path.join(basepath, 'nertrain.py'),
                         "--output", output
                     ])
     # train QA model
