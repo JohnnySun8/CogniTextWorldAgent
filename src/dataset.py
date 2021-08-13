@@ -21,7 +21,7 @@ DEBUG = False
 def get_cv_games(datapath, block='valid'):
     games = [game for game in os.listdir(datapath)
              if game.endswith('.ulx')]
-    with open('valid200.txt') as f:
+    with open('./CogniTextWorldAgent/src/valid200.txt') as f:
         valid = [g.strip() for g in f.readlines()]
     if block == 'valid':
         games = [os.path.join(datapath, game)
